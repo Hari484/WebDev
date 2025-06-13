@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+}
+header{
+    font : normal small-caps lighter 13px/1.5 arial;
+    color :brown;
+}
+.container{
+    background-color: #e2e2e2;
+    padding: 10px;
+    max-width: 100%;
+}
+h1{
+    text-align: center;
+    font: normal normal bolder 50px/0.5 times;
+    text-decoration: underline overline;
+    color: rgba(35, 35, 218, 0.842);
+}
+#first-line{
+    text-align: center;
+    font: normal normal normal 19px/1 times;
+    letter-spacing: normal;
+     color: rgba(18, 18, 124, 0.842);
+}
+input:focus{
+    background-color: rgba(209, 222, 236, 0.938);
+    color:rgb(6, 6, 15);
+}
+form > b{
+    font : normal normal bold 20px/1 times;
+    color: rgba(35, 35, 218, 0.842);
+    margin: 5px;
+    
+}
+select {
+    width: 20%;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 2px;
+    border:#d4cece;
+}
+input[type="text"],input[type="email"] , input[type="password"]{
+    width :30%;
+    padding: 9px;
+    border-radius: 2px;
+    border:#d4cece;
+}
+.red{
+    color: red;
+    font-weight:bold; 
+}
+label{
+    font: normal small-caps normal 17px/1 times;
+    padding: 5px;
+    margin: 5px;
+    line-height: 25px;
+    color: rgba(18, 18, 124, 0.842);
+}
+label:hover{
+    color: rgb(37, 168, 37);
+    cursor: pointer;
+}
+input[type="radio"]:checked{
+    accent-color: #187c45; 
+}
+.checkbox{
+    font: normal small-caps normal 17px/1 times;
+    padding: 5px;
+    margin: 5px;
+    line-height: 25px;
+    color: rgba(14, 14, 99, 0.842);
+
+}
+input[type="checkbox"]:hover{
+    cursor: pointer;
+}
+input[type="checkbox"]:checked{
+    accent-color: #187c45; 
+}
+
+input[type="submit"]{
+    background-color: #2a49a0;
+    color: #ffffff;
+    padding: 10px;
+    margin: auto;
+    width: 17%;
+    font: normal small-caps bold 15px/1 times;
+
+}
+input[type="submit"]:hover{
+    background-color:   #143ca8;
+    color: rgba(236, 248, 59, 0.842);
+    padding: 10px;
+    margin: auto;
+    width: 18%;
+    font: normal small-caps bolder 16px/1 times;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}

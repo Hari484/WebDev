@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form-styling.css">
     <title>newspaper form</title>
 </head>
 <body>
     <header><small><i> 3<sup>rd</sup>Project of Html: Basic Form</i></small></header>
     <hr>
+    <div class="container">
     <h1 ><center><big><b> Newsletter Signup Form</b></big></center></h1>
-    <center>If u want to keep up to date with whats happening on the blog,signup for our newsletter....</center>
+    <p id="first-line">If u want to keep up to date with whats happening on the blog,signup for our newsletter....</p>
     <br>
    <form action="acton.php">
-        <b>Enter your Name :-</b>
+        <b>Enter your Name<span class="red">*</span>:-</b>
         <br>
-              <pre>  <input type="text" placeholder="First name"><small>First</small>   <input type="text" placeholder="Last name"><small> Last </small>
+              <pre>  <input type="text" placeholder="First name" required>       <input type="text" placeholder="Last name">
                 </pre>
-    <b>Enter your email address :-</b> 
+    <b>Enter your email address<span class="red">*</span>:- </b> 
     <br>
-    <pre>  <input type="email" placeholder="*********@gmail.com ">       <input type="email" placeholder="Confirm email address "> </pre>
+    <pre>  <input type="email" placeholder="*********@gmail.com " required>       <input type="email" placeholder="Confirm email address " required> </pre>
     <br>
-    <b> Enter password:-</b>
+    <b> Enter password<span class="red">*</span>:- </b>
     <br>
-    <pre>  <input type="password" placeholder="zX$32#!YuIoL..**">       <input type="password"placeholder=" Confirm password">
+    <pre>  <input type="password" placeholder="zX$32#!YuIoL..**" required>       <input type="password"placeholder=" Confirm password" required>
              </pre>
 
              <b>Select Language :-</b>
@@ -88,12 +90,17 @@
         <option value="Thailand">Thailand</option>
 </select>
 <br><br>
+
+<div class="checkbox">
 <input type="checkbox"> i am not a robot
 <br>
 <input type="checkbox"> i agree to terms and policies of site.
 <br><br>
-<input type="submit" value = "search">
+</div>
+
+<input type="submit">
 <hr>
+
 <footer>
     <i><small>For more info visit to our site <a href="https://www.dawn.com/newsletters/" target="_blank">www.news.com</a>
     <br><a href="tel:03197190559" target="_blank">Call: 03197190559</a>
@@ -104,7 +111,7 @@
 
 
 </form> 
-    
+    </div>
 
         
     </form>
