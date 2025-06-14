@@ -4,6 +4,7 @@
 header{
     font : normal small-caps lighter 13px/1.5 arial;
     color :brown;
+    background-color: antiquewhite;
 }
 .container{
     background-color: #e2e2e2;
@@ -23,11 +24,11 @@ h1{
      color: rgba(18, 18, 124, 0.842);
 }
 input:focus{
-    background-color: rgba(209, 222, 236, 0.938);
-    color:rgb(6, 6, 15);
+    background-color: rgba(245, 250, 255, 0.938);
+    color:rgb(50, 50, 153);
 }
 form > b{
-    font : normal normal bold 20px/1 times;
+    font : normal normal bold 22px/1 times;
     color: rgba(35, 35, 218, 0.842);
     margin: 5px;
     
@@ -35,34 +36,41 @@ form > b{
 select {
     width: 20%;
     cursor: pointer;
-    padding: 10px;
+    padding: 13px;
     border-radius: 2px;
     border:#d4cece;
 }
 input[type="text"],input[type="email"] , input[type="password"]{
-    width :30%;
-    padding: 9px;
+    width :25%;
+    padding: 12px;
     border-radius: 2px;
     border:#d4cece;
+    color: #07194be1;
+    font: normal normal normal 15px arial;
 }
 .red{
     color: red;
     font-weight:bold; 
 }
 label{
-    font: normal small-caps normal 17px/1 times;
+    font: normal small-caps normal 18px/1 times;
     padding: 5px;
     margin: 5px;
     line-height: 25px;
     color: rgba(18, 18, 124, 0.842);
 }
 label:hover{
-    color: rgb(37, 168, 37);
+     color: rgba(18, 18, 124, 0.842);
     cursor: pointer;
+    font-weight: bold;
 }
 input[type="radio"]:checked{
     accent-color: #187c45; 
 }
+input[type="radio"]{
+    cursor: pointer;
+}
+
 .checkbox{
     font: normal small-caps normal 17px/1 times;
     padding: 5px;
@@ -79,12 +87,13 @@ input[type="checkbox"]:checked{
 }
 
 input[type="submit"]{
-    background-color: #2a49a0;
+    background-color: #355bc2;
     color: #ffffff;
     padding: 10px;
-    margin: auto;
+    margin: 10px;
     width: 17%;
-    font: normal small-caps bold 15px/1 times;
+    font: normal small-caps bold 26px/1 times;
+    transition: background-color 0.2s ease-in;
 
 }
 input[type="submit"]:hover{
@@ -93,9 +102,47 @@ input[type="submit"]:hover{
     padding: 10px;
     margin: auto;
     width: 18%;
-    font: normal small-caps bolder 16px/1 times;
+    font: normal small-caps bolder 26px/1 times;
+    cursor: pointer;
+}
+input[type="reset"]{
+    background-color: #355bc2;
+    color: #ffffff;
+    padding: 10px;
+    margin: 10px;
+    width: 17%;
+    font: normal small-caps bold 26px/1 times;
+    transition: background-color 0.2s ease-in;
+}
+input[type="reset"]:hover{
+    background-color:   #143ca8;
+    color: rgba(236, 248, 59, 0.842);
+    padding: 10px;
+    margin: auto;
+    width: 18%;
+    font: normal small-caps bolder 26px/1 times;
     cursor: pointer;
 }
 a{
     text-decoration: none;
+    color: rgba(18, 18, 124, 0.842);
+    font : italic normal normal 16px/1.5 times;
+}
+a:link{
+    color:rgb(55, 0, 255);
+    background-color: #ccd4e9;
+}
+a:active{
+    color: red;
+    font-weight: bolder;
+    background-color: rgb(211, 135, 135);
+}
+a:visited{
+   color:rgb(184, 47, 189);
+}
+footer{
+    text-align: center;
+    font:normal normal lighter 19px/1.5 times ;
+    margin: 0;
+   color: rgba(18, 18, 124, 0.842);
 }
