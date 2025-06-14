@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+}
+
+header{
+    font: italic normal bold 15px/1.5 monospace;
+    background-color: rgba(226, 143, 143, 0.753);
+    color: brown;
+}
+/* styling navigation menu */
+nav{
+    float: left;
+    background-color: rgb(238, 157, 171);
+    width: 70%;
+    padding: 18px;
+    margin: 10px;
+    border-radius: 3px;
+    
+}
+ a{
+        text-decoration: none;
+        padding: 65px;
+        color: aliceblue;
+        font: normal normal normal 24px/1.5 'Open Sans';
+    }
+a:hover{
+       color:rgb(207, 28, 58);
+}
+/* styling title  */
+h1{
+    text-align: center;
+    font: normal normal bolder 100px/1.5 'Oswald', sans-serif;
+    color: rgb(160, 41, 61);
+    text-shadow: 5px 5px 22px;
+}
+.container {
+  background-image: url("images/cover_1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Ensures it covers full screen height */
+}
