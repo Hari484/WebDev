@@ -1,4 +1,10 @@
-# WebDev
- Learning Web Development
- <br>
-👉 [Open my Blog](https://Hari484.github.io/WebDev/Html%20projects/blog.html)  
+# WebDev Learning
+
+This repository contains my web development practice projects 🚀  
+
+## 🌐 Live Website
+Check it out here 👉 [Click to View](https://hari484.github.io/WebDev/)
+
+## 📂 Projects
+- Blog page  
+- Other HTML/CSS practice projects
