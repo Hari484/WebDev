@@ -87,13 +87,18 @@
       box-shadow: 0 6px 18px rgba(0,0,0,0.6);
     }
     .github-btn::before {
-      content: "🐙"; /* GitHub octopus icon vibe */
+      content: "🐙"; /* GitHub vibe */
       font-size: 1.3rem;
     }
 
-    /* --- hide GitHub's default footer link --- */
-    footer a[href*="github.com"] {
+    /* --- hide GitHub default footer link --- */
+    footer, 
+    footer a, 
+    footer[role="contentinfo"], 
+    a[href*="github.com"].github-button {
       display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
     }
   </style>
 </head>
@@ -120,12 +125,6 @@
 
   <!-- GitHub button -->
   <a class="github-btn" href="https://github.com/Hari484/WebDev" target="_blank">View on GitHub</a>
-</body>
-</html>
-
-  
-  <!-- Repo Button -->
-  <a class="button" href="https://github.com/Hari484/WebDev" target="_blank">📂 View on GitHub</a>
 </body>
 </html>
 
