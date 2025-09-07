@@ -4,42 +4,93 @@
   <meta charset="UTF-8">
   <title>My WebDev Projects</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      text-align: center;
-      padding: 40px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    h1 {
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #fceabb, #f8b500);
+      /* agar image use karni ho to neeche wali line enable karo */
+      /* background: url('images/background.jpg') no-repeat center center/cover; */
       color: #333;
     }
-    ul {
-      list-style: none;
-      padding: 0;
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #222;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
     }
-    li {
-      margin: 15px 0;
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      width: 90%;
+      max-width: 1000px;
     }
-    a {
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.25);
+    }
+    .card a {
       text-decoration: none;
-      font-size: 18px;
-      color: #0073e6;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #f57c00;
+      transition: color 0.3s ease;
     }
-    a:hover {
-      color: #ff6600;
+    .card a:hover {
+      color: #d84315;
+    }
+    .emoji {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 10px;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
     }
   </style>
 </head>
 <body>
   <h1>🚀 My WebDev Projects</h1>
-  <ul>
-    <li><a href="Html projects/blog.html" target="_blank">📝 Blog Project</a></li>
-    <li><a href="Html projects/portfolio.html" target="_blank">💼 Portfolio Project</a></li>
-    <li><a href="Html projects/Bsic form.html" target="_blank">📋 Form Project</a></li>
-    <li><a href="Html projects/Bio Page.html" target="_blank">👤 Bio Page</a></li>
-  </ul>
+  <div class="projects">
+    <div class="card">
+      <span class="emoji">📝</span>
+      <a href="Html projects/blog.html" target="_blank">Blog Project</a>
+    </div>
+    <div class="card">
+      <span class="emoji">💼</span>
+      <a href="Html projects/portfolio.html" target="_blank">Portfolio Project</a>
+    </div>
+    <div class="card">
+      <span class="emoji">📋</span>
+      <a href="Html projects/Bsic form.html" target="_blank">Form Project</a>
+    </div>
+    <div class="card">
+      <span class="emoji">👤</span>
+      <a href="Html projects/Bio Page.html" target="_blank">Bio Page</a>
+    </div>
+  </div>
 </body>
 </html>
+
 
   
   <!-- Repo Button -->
