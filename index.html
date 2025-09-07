@@ -87,7 +87,7 @@
       box-shadow: 0 6px 18px rgba(0,0,0,0.6);
     }
     .github-btn::before {
-      content: "🐙"; /* GitHub vibe */
+      content: "🐙";
       font-size: 1.3rem;
     }
 
@@ -99,6 +99,56 @@
       display: none !important;
       visibility: hidden !important;
       opacity: 0 !important;
+    }
+
+    /* ---------------- MOBILE VIEW (max 768px) ---------------- */
+    @media (max-width: 768px) {
+      body {
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        color: #fff;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 2rem;
+        color: #ffeb3b;
+        text-shadow: 3px 3px 8px rgba(0,0,0,0.6);
+        animation: glow 2s ease-in-out infinite alternate;
+      }
+      @keyframes glow {
+        from { text-shadow: 0 0 10px #ffeb3b, 0 0 20px #ff5722; }
+        to { text-shadow: 0 0 20px #ffeb3b, 0 0 40px #ff5722; }
+      }
+      .projects {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+      .card {
+        background: linear-gradient(135deg, #ff6a00, #ee0979);
+        color: #fff;
+        border: 2px solid #fff;
+        transform: rotate(-1deg);
+        transition: transform 0.3s ease;
+      }
+      .card:hover {
+        transform: rotate(1deg) scale(1.05);
+      }
+      .card a {
+        font-size: 1.4rem;
+        color: #fff;
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+      }
+      .emoji {
+        font-size: 2.5rem;
+      }
+      .github-btn {
+        background: linear-gradient(135deg, #ff0080, #7928ca);
+        border: 2px solid #fff;
+        font-size: 1.2rem;
+        padding: 15px 35px;
+      }
+      .github-btn::before {
+        content: "⭐";
+      }
     }
   </style>
 </head>
@@ -127,4 +177,5 @@
   <a class="github-btn" href="https://github.com/Hari484/WebDev" target="_blank">View on GitHub</a>
 </body>
 </html>
+
 
