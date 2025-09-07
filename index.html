@@ -17,138 +17,104 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(135deg, #fceabb, #f8b500);
-      color: #333;
+      background: #121212;
+      color: #e0e0e0;
+      padding: 20px;
     }
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       margin-bottom: 30px;
-      color: #222;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      font-weight: 600;
+      color: #ffffff;
     }
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 20px;
-      width: 90%;
+      width: 100%;
       max-width: 1000px;
     }
     .card {
-      background: #fff;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      background: #1e1e1e;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.6);
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(255,255,255,0.08);
     }
     .card:hover {
-      transform: translateY(-10px) scale(1.05);
-      box-shadow: 0 12px 20px rgba(0,0,0,0.25);
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.8);
     }
     .card a {
       text-decoration: none;
       font-size: 1.2rem;
-      font-weight: bold;
-      color: #f57c00;
+      font-weight: 500;
+      color: #bb86fc;
       transition: color 0.3s ease;
     }
     .card a:hover {
-      color: #d84315;
+      color: #03dac6;
     }
     .emoji {
       font-size: 2rem;
       display: block;
-      margin-bottom: 10px;
-      animation: bounce 2s infinite;
-    }
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
+      margin-bottom: 12px;
+      opacity: 0.9;
     }
 
     /* --- GitHub Button --- */
     .github-btn {
       margin-top: 40px;
-      padding: 12px 30px;
-      background: linear-gradient(135deg, #24292f, #000);
+      padding: 12px 28px;
+      background: linear-gradient(135deg, #333, #000);
       color: #fff;
-      font-size: 1.1rem;
-      font-weight: bold;
+      font-size: 1rem;
+      font-weight: 500;
       text-decoration: none;
-      border-radius: 40px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.7);
       transition: all 0.3s ease;
       display: inline-flex;
       align-items: center;
       gap: 8px;
     }
     .github-btn:hover {
-      background: linear-gradient(135deg, #000, #444);
-      transform: scale(1.1);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+      background: linear-gradient(135deg, #444, #111);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.8);
     }
     .github-btn::before {
-      content: "🐙";
-      font-size: 1.3rem;
+      content: ""; /* GitHub icon */
+      font-family: "Font Awesome 5 Free", sans-serif;
+      font-weight: 900;
     }
 
     /* --- hide GitHub default footer link --- */
-    footer, 
-    footer a, 
-    footer[role="contentinfo"], 
-    a[href*="github.com"].github-button {
+    footer, footer a, footer[role="contentinfo"] {
       display: none !important;
-      visibility: hidden !important;
-      opacity: 0 !important;
     }
 
-    /* ---------------- MOBILE VIEW (max 768px) ---------------- */
+    /* --- MOBILE view tweaks --- */
     @media (max-width: 768px) {
       body {
-        background: linear-gradient(135deg, #1e3c72, #2a5298);
-        color: #fff;
-        padding: 20px;
+        padding: 15px;
+        background: #0d0d0d;
       }
       h1 {
-        font-size: 2rem;
-        color: #ffeb3b;
-        text-shadow: 3px 3px 8px rgba(0,0,0,0.6);
-        animation: glow 2s ease-in-out infinite alternate;
-      }
-      @keyframes glow {
-        from { text-shadow: 0 0 10px #ffeb3b, 0 0 20px #ff5722; }
-        to { text-shadow: 0 0 20px #ffeb3b, 0 0 40px #ff5722; }
-      }
-      .projects {
-        grid-template-columns: 1fr;
-        gap: 25px;
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+        text-align: center;
       }
       .card {
-        background: linear-gradient(135deg, #ff6a00, #ee0979);
-        color: #fff;
-        border: 2px solid #fff;
-        transform: rotate(-1deg);
-        transition: transform 0.3s ease;
-      }
-      .card:hover {
-        transform: rotate(1deg) scale(1.05);
+        padding: 20px;
       }
       .card a {
-        font-size: 1.4rem;
-        color: #fff;
-        text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+        font-size: 1.1rem;
       }
       .emoji {
-        font-size: 2.5rem;
-      }
-      .github-btn {
-        background: linear-gradient(135deg, #ff0080, #7928ca);
-        border: 2px solid #fff;
-        font-size: 1.2rem;
-        padding: 15px 35px;
-      }
-      .github-btn::before {
-        content: "⭐";
+        font-size: 1.8rem;
       }
     }
   </style>
@@ -178,5 +144,6 @@
   <a class="github-btn" href="https://github.com/Hari484/WebDev" target="_blank">View on GitHub</a>
 </body>
 </html>
+
 
 
