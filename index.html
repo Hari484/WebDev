@@ -68,21 +68,32 @@
     /* --- GitHub Button --- */
     .github-btn {
       margin-top: 40px;
-      padding: 12px 28px;
-      background: linear-gradient(135deg, #333, #555);
+      padding: 12px 30px;
+      background: linear-gradient(135deg, #24292f, #000);
       color: #fff;
       font-size: 1.1rem;
       font-weight: bold;
       text-decoration: none;
-      border-radius: 30px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      border-radius: 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
       transition: all 0.3s ease;
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
     .github-btn:hover {
-      background: linear-gradient(135deg, #444, #000);
+      background: linear-gradient(135deg, #000, #444);
       transform: scale(1.1);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+    }
+    .github-btn::before {
+      content: "🐙"; /* GitHub octopus icon vibe */
+      font-size: 1.3rem;
+    }
+
+    /* --- hide GitHub's default footer link --- */
+    footer a[href*="github.com"] {
+      display: none !important;
     }
   </style>
 </head>
@@ -108,10 +119,9 @@
   </div>
 
   <!-- GitHub button -->
-  <a class="github-btn" href="https://github.com/Hari484/WebDev" target="_blank">⭐ View on GitHub</a>
+  <a class="github-btn" href="https://github.com/Hari484/WebDev" target="_blank">View on GitHub</a>
 </body>
 </html>
-
 
   
   <!-- Repo Button -->
