@@ -5,110 +5,174 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My WebDev Projects</title>
 
-  <!-- Google Font: Montserrat -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Montserrat font for heading -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
 
   <style>
-    /* Reset */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #121212;
-      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
-      padding: 40px 20px;
+      color: #e0e0e0;
+      padding: 20px;
+
+      /* --- animated gradient background --- */
+      background: linear-gradient(-45deg, #0d0d0d, #1a1a1a, #222, #141414);
+      background-size: 400% 400%;
+      animation: gradientShift 18s ease infinite;
     }
 
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 40px;
+      font-size: 2.2rem;
+      margin-bottom: 30px;
       font-weight: 600;
       color: #ffffff;
-      text-align: center;
+      font-family: 'Montserrat', sans-serif; /* special font */
+      animation: fadeInDown 1s ease forwards;
     }
 
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 20px;
       width: 100%;
-      max-width: 1200px;
+      max-width: 1000px;
     }
 
     .card {
       background: #1e1e1e;
-      padding: 20px;
+      padding: 25px;
       border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.6);
       text-align: center;
+      border: 1px solid rgba(255,255,255,0.08);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       cursor: pointer;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s ease forwards;
     }
+    .card:nth-child(1) { animation-delay: 0.2s; }
+    .card:nth-child(2) { animation-delay: 0.4s; }
+    .card:nth-child(3) { animation-delay: 0.6s; }
+    .card:nth-child(4) { animation-delay: 0.8s; }
 
     .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 25px rgba(0, 255, 200, 0.4);
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.8);
+    }
+
+    .card a {
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #bb86fc;
+      transition: color 0.3s ease;
+    }
+    .card a:hover {
+      color: #03dac6;
     }
 
     .emoji {
       font-size: 2rem;
-      margin-bottom: 10px;
       display: block;
+      margin-bottom: 12px;
+      opacity: 0.9;
     }
 
-    .card a {
-      color: #00ffc3;
-      text-decoration: none;
-      font-size: 1.1rem;
+    /* GitHub Button */
+    .github-btn {
+      margin-top: 40px;
+      padding: 12px 28px;
+      background: linear-gradient(135deg, #333, #000);
+      color: #fff;
+      font-size: 1rem;
       font-weight: 500;
-      transition: color 0.3s ease;
+      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.7);
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 1.2s;
+    }
+    .github-btn:hover {
+      background: linear-gradient(135deg, #444, #111);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.8);
+    }
+    .github-btn::before {
+      content: "";
+      font-family: "Font Awesome 5 Free", sans-serif;
+      font-weight: 900;
     }
 
-    .card:hover a {
-      color: #ffffff;
+    /* hide GitHub default footer link */
+    footer, footer a, footer[role="contentinfo"] {
+      display: none !important;
     }
 
-    /* Responsive */
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-      .card {
-        padding: 15px;
-      }
-      .card a {
-        font-size: 1rem;
-      }
+    /* Animations */
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Mobile tweaks */
+    @media (max-width: 768px) {
+      body { padding: 15px; }
+      h1 { font-size: 1.8rem; margin-bottom: 25px; }
+      .card { padding: 20px; }
+      .card a { font-size: 1.1rem; }
+      .emoji { font-size: 1.8rem; }
     }
   </style>
 </head>
 <body>
-
-  <h1>My WebDev Projects</h1>
-
+  <h1>🚀 My WebDev Projects</h1>
   <div class="projects">
     <div class="card">
-      <span class="emoji">📄</span>
-      <a href="Html projects/basic-form.html" target="_blank">Basic Form</a>
+      <span class="emoji">📝</span>
+      <a href="Html projects/blog.html" target="_blank">Blog Project</a>
     </div>
-
     <div class="card">
-      <span class="emoji">🎨</span>
-      <a href="Html projects/css-demo.html" target="_blank">CSS Demo</a>
+      <span class="emoji">💼</span>
+      <a href="Html projects/portfolio.html" target="_blank">Portfolio Project</a>
     </div>
-
     <div class="card">
-      <span class="emoji">💡</span>
-      <a href="Html projects/js-demo.html" target="_blank">JavaScript Demo</a>
+      <span class="emoji">📋</span>
+      <a href="Html projects/Bsic form.html" target="_blank">Form Project</a>
+    </div>
+    <div class="card">
+      <span class="emoji">👤</span>
+      <a href="Html projects/Bio Page.html" target="_blank">Bio Page</a>
     </div>
   </div>
 
+  <a class="github-btn" href="https://github.com/Hari484/WebDev" target="_blank">View on GitHub</a>
 </body>
 </html>
 
