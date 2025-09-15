@@ -1,118 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="form-styling.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <title>newspaper form</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Registration Form</title>
+  <link rel="stylesheet" href="form-styling.css">
 </head>
 <body>
-    <header><small><i> 3<sup>rd</sup>Project of Html: Basic Form</i></small></header>
-    <hr>
-    <div class="container">
-    <h1 ><center><big><b> Newsletter Signup Form</b></big></center></h1>
-    <p id="first-line">If u want to keep up to date with whats happening on the blog,signup for our newsletter....</p>
-    <br>
-   <form action="acton.php">
-        <b>Enter your Name<span class="red">*</span>:-</b>
-        <br>
-              <pre>  <input type="text" placeholder="First name" required>       <input type="text" placeholder="Last name">
-                </pre>
-    <b>Enter your email address<span class="red">*</span>:- </b> 
-    <br>
-    <pre>  <input type="email" placeholder="*********@gmail.com " required>       <input type="email" placeholder="Confirm email address " required> </pre>
-    <br>
-    <b> Enter password<span class="red">*</span>:- </b>
-    <br>
-    <pre>  <input type="password" placeholder="zX$32#!YuIoL..**" required>       <input type="password"placeholder=" Confirm password" required>
-             </pre>
+  <div class="container">
+    <h1>Registration Form</h1>
+    <p id="first-line">Please fill in the details below to create your account.</p>
 
-             <b>Select Language :-</b>
-             <br>
-             <label for="1">
-             <input type="radio" value="English" name="Language"  id="1">English
-             </label>
-             <br>
-             <label for="2">
-             <input type="radio" value="Urdu" name="Language" id="2">Urdu
-             </label>
-             <br>
-             <label for="3">
-             <input type="radio" value="Punjabi" name="Language" id="3">Punjabi
-             </label>
-             <br>
-             <label for="4">
-             <input type="radio" value="Chinese"  name="Language" id="4">Chinese
-             </label>
-             <br>
-             <label for="5">
-             <input type="radio" value="French" name="Language" id="5">French
-             </label>
-             <br>
-             <label for="6">
-             <input type="radio" value="Japnease" name="Language" id="6">Japnease
-             </label>
-<br><br>
+    <form>
+      <!-- Name -->
+      <div class="row">
+        <div>
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="fname" placeholder="John" required>
+        </div>
+        <div>
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lname" placeholder="Doe">
+        </div>
+      </div>
 
-    <b>Select your country:</b>
-   <select name="country" >
-    <option value="" disabled selected></option>
-        <option value="USA">USA</option>
-        <option value="America">America</option>
-        <option value="Canada">Canada</option>
-        <option value="UK">UK</option>
-        <option value="Pakistan">Pakistan</option>
-        <option value="India">India</option>
-        <option value="Maxico">Maxico</option>
-        <option value="Brazil">Brazil</option>
-        <option value="China">China</option>
-        <option value="Japan">Japan</option>
-        <option value="Spain">Spain</option>
-        <option value="Germany">Germany</option>
-        <option value="France">France</option>
-        <option value="Italy">Italy</option>
-        <option value="Australia">Australia</option>
-        <option value="New Zealand">New Zealand</option>
-        <option value="South Africa">South Africa</option>
-        <option value="Egypt">Egypt</option>
-        <option value="Russia">Russia</option>
-        <option value="South Korea">South Korea</option>
-        <option value="Saudi Arabia">Saudi Arabia</option>
-        <option value="Argentina">Argentina</option>
-        <option value="Chile">Chile</option>
-        <option value="Peru">Peru</option>
-        <option value="Sweden">Sweden</option>
-        <option value="Norway">Norway</option>
-        <option value="Netherlands">Netherlands</option>  
-        <option value="Switzerland">Switzerland</option>
-        <option value="Greece">Greece</option>
-        <option value="Turkey">Turkey</option>
-        <option value="Thailand">Thailand</option>
-</select>
-<br><br>
+      <!-- Email -->
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="example@email.com" required>
 
-<div class="checkbox">
-<input type="checkbox"> i am not a robot
-<br>
-<input type="checkbox"> i agree to terms and policies of site.
-<br><br>
-</div>
+      <!-- Passwords -->
+      <div class="row">
+        <div>
+          <label for="pass">Password</label>
+          <input type="password" id="pass" name="pass" placeholder="********" required>
+        </div>
+        <div>
+          <label for="cpass">Confirm Password</label>
+          <input type="password" id="cpass" name="cpass" placeholder="********" required>
+        </div>
+      </div>
 
-<input type="submit"> <input type="reset">
-<hr>
+      <!-- Gender -->
+      <b>Gender</b>
+      <div class="row">
+        <label><input type="radio" name="gender" value="male"> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <label><input type="radio" name="gender" value="other"> Other</label>
+      </div>
 
-<footer>
-    For more info visit to our site 
-    <br><a href="https://www.dawn.com/newsletters/" target="_blank">www.news.com &nbsp;&nbsp;<i class="fa-solid fa-newspaper"> &nbsp;&nbsp;<i class="fa-solid fa-envelope"></i></i></a>
-    <br><a href="tel:03197190559" target="_blank">&nbsp;&nbsp; 03197190559 &nbsp;&nbsp; <i class="fa-solid fa-phone-volume"></i></a>
-    <br><a href="mailto:haramarshad484@gmail.com" target="_blank"> <i class="fa-solid fa-square-envelope"></i> &nbsp; haramarshad484@gmail.com</a>
-   <br> &copy; 2025 News Daily | All rights reserved.
-</footer>
+      <!-- Country -->
+      <label for="country">Select Country</label>
+      <select id="country" name="country">
+        <option value="">-- Choose Country --</option>
+        <option>Pakistan</option>
+        <option>India</option>
+        <option>Bangladesh</option>
+        <option>Nepal</option>
+        <option>Sri Lanka</option>
+        <option>Afghanistan</option>
+        <option>United States</option>
+        <option>Canada</option>
+        <option>United Kingdom</option>
+        <option>Germany</option>
+        <option>France</option>
+        <option>Italy</option>
+        <option>Spain</option>
+        <option>Australia</option>
+        <option>New Zealand</option>
+        <option>South Africa</option>
+        <option>UAE</option>
+        <option>Saudi Arabia</option>
+        <option>Qatar</option>
+        <option>Turkey</option>
+      </select>
 
-</form> 
-    </div>
+      <!-- Terms -->
+      <label>
+        <input type="checkbox" required>
+        I agree to the <a href="#">Terms & Conditions</a>.
+      </label>
 
+      <!-- Buttons -->
+      <div class="row buttons">
+        <button type="submit" class="btn-submit">Register</button>
+        <button type="reset" class="btn-reset">Reset</button>
+      </div>
+    </form>
+
+    <footer>
+      Already have an account? <a href="#">Login here</a>
+    </footer>
+  </div>
 </body>
 </html>
